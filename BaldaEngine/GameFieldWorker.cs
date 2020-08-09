@@ -216,9 +216,9 @@ namespace BaldaEngine
                     lastBestWord = res;
                     iterationCache.Add(res);
                 }
-            }
 
-            _gameField.ParsedGameField = cachedGameField;
+                _gameField.ParsedGameField = cachedGameField;
+            }
 
             return iterationCache.OrderBy(x => x.Length).Reverse().Take(10).ToArray();
         }
